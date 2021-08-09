@@ -13,3 +13,5 @@ Pipeline:
 Step1:
   name: step1
   name1: step2
+  
+foo: bar
