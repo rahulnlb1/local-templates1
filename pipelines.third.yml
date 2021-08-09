@@ -1,0 +1,11 @@
+pipelines:
+  - name: thirdpipeline
+    steps:
+      - name: thirdstep
+        type: Bash
+        execution:
+          onExecute:
+            - echo "Executing Step ${step_name}"
+            - echo "Hello world"
+          onComplete:
+            - echo "${step_name} Completed"
