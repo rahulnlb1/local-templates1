@@ -1,0 +1,14 @@
+template: true   # required for local templates    
+valuesFilePath: values.yml 
+
+pipelines:
+  - name: {{ Values.Pipeline.name1 }}
+    steps:
+      - name: {{ Values.Step1.name1 }}
+        type: Bash
+        execution:
+          onExecute:
+            - echo "Executing Step ${step_name}"
+            - echo "Hello world"
+          onComplete:
+            - echo "${step_name} Completed"
