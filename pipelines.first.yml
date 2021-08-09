@@ -2,9 +2,9 @@ template: true   # required for local templates
 valuesFilePath: values.yml 
 
 pipelines:
-  - name: {{ Values.Pipeline.name }}
+  - name: {{ .Values.Pipeline.name }}
     steps:
-      - name: {{ Values.Step1.name }}
+      - name: {{ .Values.Step1.name }}
         type: Bash
         execution:
           onExecute:
